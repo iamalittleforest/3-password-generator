@@ -6,8 +6,8 @@ var specialChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "
 
 // Define inputs into variables
 var passwordLength;
-var useUpperCase;
 var useLowerCase;
+var useUpperCase;
 var useNumber;
 var useSpecialChar;
 
@@ -33,6 +33,24 @@ var passwordLength = window.prompt("Choose a password length between 8 and 128 c
 console.log("Password Length", passwordLength);
 
 // Validate password length against requirements
-if (passwordLength.length < 8 || passwordLength.length > 128) {
+while (passwordLength < 8 || passwordLength > 128) {
     alert("Password length must be between 8 and 128 characters.");
+    passwordLength = window.prompt("Choose a password length between 8 and 128 characters.");
+    console.log("Password Length", passwordLength);
 }
+
+// Prompt user to include lowercase characters
+var useLowerCase = window.confirm("Click OK to include lowercase characters.");
+console.log("Use Lowercase Characters", useLowerCase);
+
+// Prompt user to include uppercase characters
+var useUpperCase = window.confirm("Click OK to include uppercase characters.");
+console.log("Use Uppercase Characters", useUpperCase);
+
+// Prompt user to include numeric characters
+var useNumber = window.confirm("Click OK to include numeric characters.");
+console.log("Use Numeric Characters", useNumber);
+
+// Prompt user to include special characters
+var useSpecialChar = window.confirm("Click OK to include special characters.");
+console.log("Use Special Characters", useSpecialChar);
