@@ -4,13 +4,6 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "`", "{", "|", "}", "~"];
 
-// Define inputs into variables
-var passwordLength;
-var useLowerCase;
-var useUpperCase;
-var useNumber;
-var useSpecialChar;
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -27,30 +20,42 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-
 // Prompt user to input password length
 var passwordLength = window.prompt("Choose a password length between 8 and 128 characters.");
 console.log("Password Length", passwordLength);
 
 // Validate password length against requirements
 while (passwordLength < 8 || passwordLength > 128) {
-    alert("Password length must be between 8 and 128 characters.");
-    passwordLength = window.prompt("Choose a password length between 8 and 128 characters.");
-    console.log("Password Length", passwordLength);
+  alert("Password length must be between 8 and 128 characters.");
+  passwordLength = window.prompt("Choose a password length between 8 and 128 characters.");
+  console.log("Password Length", passwordLength);
 }
 
-// Prompt user to include lowercase characters
+// User confirmation to include/exclude lowercase characters
 var useLowerCase = window.confirm("Click OK to include lowercase characters.");
 console.log("Use Lowercase Characters", useLowerCase);
 
-// Prompt user to include uppercase characters
+// User confirmation to include/exclude uppercase characters
 var useUpperCase = window.confirm("Click OK to include uppercase characters.");
 console.log("Use Uppercase Characters", useUpperCase);
 
-// Prompt user to include numeric characters
+// User confirmation to include/exclude numeric characters
 var useNumber = window.confirm("Click OK to include numeric characters.");
 console.log("Use Numeric Characters", useNumber);
 
-// Prompt user to include special characters
+// User confirmation to include/exclude special characters
 var useSpecialChar = window.confirm("Click OK to include special characters.");
 console.log("Use Special Characters", useSpecialChar);
+
+// Validate character type against requirements
+while (!useLowerCase && !useUpperCase && !useNumber && !useSpecialChar) {
+  alert("At least one character type is required.");
+  useLowerCase = window.confirm("Click OK to include lowercase characters.");
+  console.log("Use Lowercase Characters", useLowerCase);
+  useUpperCase = window.confirm("Click OK to include uppercase characters.");
+  console.log("Use Uppercase Characters", useUpperCase);
+  useNumber = window.confirm("Click OK to include numeric characters.");
+  console.log("Use Numeric Characters", useNumber);
+  useSpecialChar = window.confirm("Click OK to include special characters.");
+  console.log("Use Special Characters", useSpecialChar);
+  }
