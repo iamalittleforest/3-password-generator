@@ -2,7 +2,7 @@
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialChar = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "`", "{", "|", "}", "~"];
+var specialChar = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -59,3 +59,33 @@ while (!useLowerCase && !useUpperCase && !useNumber && !useSpecialChar) {
   useSpecialChar = window.confirm("Click OK to include special characters.");
   console.log("Use Special Characters", useSpecialChar);
   }
+
+// Build the password
+var password = "";
+var selectedCharType = [];
+
+  // If selected, add lowerCase array to selectedCharType array
+  if (useLowerCase) {
+      selectedCharType = selectedCharType.concat(lowerCase);
+  }
+
+  // If selected, add lowerCase array to selectedCharType array
+  if (useUpperCase) {
+      selectedCharType = selectedCharType.concat(upperCase);
+  }
+
+  // If selected, add lowerCase array to selectedCharType array
+  if (useNumber) {
+      selectedCharType = selectedCharType.concat(number);
+  }
+
+  // If selected, add lowerCase array to selectedCharType array
+  if (useSpecialChar) {
+      selectedCharType = selectedCharType.concat(specialChar);
+  }
+
+  // Build password using requirements for length and character type
+  for (var i = 0; i < passwordLength; i++) {
+      password = password + selectedCharType[Math.floor(Math.random() * selectedCharType.length)];
+  }
+  console.log("Password", password);
