@@ -26,8 +26,8 @@ function generatePassword() {
   console.log("Password Length", passwordLength);
 
   // Validate password length against requirements
-  while (passwordLength < 8 || passwordLength > 128) {
-    alert("Password length must be between 8 and 128 characters.");
+  while (!Number.isInteger(Number.parseInt(passwordLength)) || passwordLength < 8 || passwordLength > 128) {
+    alert("Invalid Input: Password length must be between 8 and 128 characters.")
     passwordLength = window.prompt("Choose a password length between 8 and 128 characters.");
     console.log("Password Length", passwordLength);
   }
@@ -59,7 +59,7 @@ function generatePassword() {
     console.log("Use Numeric Characters", useNumber);
     useSpecialChar = window.confirm("Click OK to include special characters.");
     console.log("Use Special Characters", useSpecialChar);
-    }
+  }
 
   // Build the password
   var password = "";
