@@ -50,6 +50,7 @@ function generatePassword() {
 
   // Validate character type against requirements
   while (!useLowerCase && !useUpperCase && !useNumber && !useSpecialChar) {
+    // Rerun confirmation sequence all character types are false
     alert("At least one character type is required.");
     useLowerCase = window.confirm("Click OK to include lowercase characters.");
     console.log("Use Lowercase Characters", useLowerCase);
@@ -70,17 +71,17 @@ function generatePassword() {
       selectedCharType = selectedCharType.concat(lowerCase);
   }
 
-  // If selected, add lowerCase array to selectedCharType array
+  // If selected, add upperCase array to selectedCharType array
   if (useUpperCase) {
       selectedCharType = selectedCharType.concat(upperCase);
   }
 
-  // If selected, add lowerCase array to selectedCharType array
+  // If selected, add number array to selectedCharType array
   if (useNumber) {
       selectedCharType = selectedCharType.concat(number);
   }
 
-  // If selected, add lowerCase array to selectedCharType array
+  // If selected, add specialChar array to selectedCharType array
   if (useSpecialChar) {
       selectedCharType = selectedCharType.concat(specialChar);
   }
