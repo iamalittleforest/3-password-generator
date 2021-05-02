@@ -1,11 +1,16 @@
-# 3-password-generator
-Week 3 Homework
+# Password Generator
 
-# Description
+## Link
+https://iamalittleforest.github.io/3-password-generator/
+
+## List of Technologies 
+
+
+## Description
 Creating a randomly generated password from user input requirements
 
-# Screenshot
-<img src="assets/images/readme-screenshot.PNG" width="500">
+## Screenshot(s)
+<img src="assets/images/readme-screenshot.png" width="500">
 
-# Link
-https://iamalittleforest.github.io/3-password-generator/
+## License
+
