@@ -43,9 +43,10 @@ THEN the password is either displayed in an alert or written to the page
 <img src="assets/images/README-screenshot.PNG" width="500" alt="screenshot">
 
 ## Demo
-<img src="assets/images/README-demo.gif" width="500" alt="demo">
+<img src="assets/images/README-demo.gif" alt="demo">
 
 ## License
+MIT License
 
-## Credit
-Wendy Kobayashi
+## Contact Information
+Wendy Kobayashi <wykobayashi@gmail.com>
