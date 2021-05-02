@@ -40,7 +40,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ## Screenshot
-<img src="assets/images/README-screenshot.PNG" width="500" alt="screenshot">
+<img src="assets/images/README-screenshot.PNG" alt="screenshot">
 
 ## Demo
 <img src="assets/images/README-demo.gif" alt="demo">
@@ -49,4 +49,4 @@ THEN the password is either displayed in an alert or written to the page
 MIT License
 
 ## Contact Information
-Wendy Kobayashi <wykobayashi@gmail.com>
+Wendy Kobayashi (<wykobayashi@gmail.com>)
