@@ -9,7 +9,7 @@ https://iamalittleforest.github.io/3-password-generator/
 * Javascript
 
 ## Description
-This application enables users to generate random passwords based on criteria that they have selected. This application runs in the browser and features dynamically updated HTML and CSS that is powered by Javascript.
+An application that enables users to generate random passwords based on criteria that they have selected.
 
 ## Screenshot
 <img src="assets/images/README-screenshot.PNG" alt="screenshot">
